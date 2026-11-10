@@ -273,6 +273,11 @@
   .step > * { position: relative; z-index: 1; }
   .num { width: 46px; height: 46px; border-radius: 50%; background: var(--navy); color: var(--ball); display: inline-flex; align-items: center; justify-content: center; font-family: var(--display); font-size: 22px; font-weight: 700; margin-bottom: 18px; }
 
+  /* Video */
+  .video-frame { position: relative; max-width: 1040px; margin: 0 auto; border-radius: 28px; overflow: hidden; background: var(--navy); aspect-ratio: 16 / 9; box-shadow: 0 40px 90px rgba(11,27,58,.28); border: 1px solid rgba(255,255,255,.12); }
+  .video-frame video { display: block; width: 100%; height: 100%; object-fit: cover; background: var(--navy); }
+  .video-note { text-align: center; margin-top: 14px; font-size: 14px; color: var(--muted); }
+
   /* Players: calendar + fidelity */
   .duo { display: grid; gap: 20px; }
   @media (min-width: 900px) { .duo { grid-template-columns: 1fr 1fr; } }
@@ -436,7 +441,7 @@
         <p class="lead reveal" style="--i:2">I tuoi giocatori prenotano in pochi tap, anche a segreteria chiusa. Tu smetti di rincorrere telefonate e fogli Excel e torni a occuparti del circolo: calendario, soci, lezioni, tornei e campionati in un unico posto, con il tuo nome e il tuo logo.</p>
         <div class="cta-row reveal" style="--i:3">
           <a class="btn btn-ball" href="#contatti">Richiedi una demo <svg width="20" height="20" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-          <a class="btn btn-ghost" href="#funzioni">Scopri le funzioni</a>
+          <a class="btn btn-ghost" href="#video"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l13-7.5z" fill="currentColor"/></svg> Guarda il video</a>
         </div>
         <ul class="checks reveal" style="--i:4">
           <li><span class="tick"><svg width="14" height="14" aria-hidden="true"><use href="#i-check"/></svg></span>Nessuna app da installare</li>
@@ -471,6 +476,23 @@
       <div class="stat reveal" style="--i:3"><b>IT · EN</b><span>per soci e ospiti stranieri</span></div>
     </div>
   </div>
+
+  <section class="sec" id="video" style="padding-bottom:0">
+    <div class="wrap">
+      <div class="sec-head reveal" style="text-align:center;margin-inline:auto">
+        <span class="eyebrow">In 60 secondi</span>
+        <h2>Guarda come cambia la giornata del tuo circolo</h2>
+        <p class="lead" style="margin-inline:auto">Calendario, soci, campionati, lezioni e tanto altro, in un minuto.</p>
+      </div>
+      <div class="video-frame reveal" style="--i:1">
+        <video controls preload="metadata" playsinline poster="video/poster.jpg" aria-label="Video promozionale di Padel Club Demo, senza parlato, con musica">
+          <source src="video/padel-club-demo.mp4" type="video/mp4">
+          Il tuo browser non riproduce i video: <a href="video/padel-club-demo.mp4">scarica il video</a>.
+        </video>
+      </div>
+      <p class="video-note">Video senza parlato, con musica. Nomi, numeri e risultati sono di fantasia.</p>
+    </div>
+  </section>
 
   <section class="sec" id="perche" style="padding-bottom:0">
     <div class="wrap">
